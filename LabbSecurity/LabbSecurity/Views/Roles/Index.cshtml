@@ -1,0 +1,31 @@
+﻿@model IEnumerable<IdentityRole>
+
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<h1>Roles</h1>
+
+<partial name="_RolePartialView" model="new RoleFormModel ()" />
+
+<table class="table table-striped mt-4">
+    <thead class="bg-primary text-white">
+        <tr>
+            <th>Id</th>
+            <th>Role name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var role in Model)
+        {
+            <tr>
+                <td>@role.Id</td>
+                <td>@role.Name</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@role.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

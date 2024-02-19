@@ -1,0 +1,11 @@
+﻿@model RoleFormModel
+<form method="post" asp-action="Index">
+    @Html.AntiForgeryToken()
+    <div class="input-group mb-3">
+        <input class="form-control" asp-for="Name" placeholder="Enter Role" />
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Add new role</button>
+        </div>
+    </div>
+    <span asp-validation-for="Name" class="text-danger"></span>
+</form>

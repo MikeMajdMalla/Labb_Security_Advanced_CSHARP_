@@ -1,0 +1,1 @@
+﻿INSERT INTO [AspNetUserRoles] (UserId,RoleId) SELECT '8e8104da-ab87-4bb9-a3cd-c7e7c8c60856', Id FROM [AspNetRoles]
